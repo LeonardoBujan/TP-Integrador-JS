@@ -35,9 +35,9 @@
         </header>
 
         <!-- Tarjetas con información de estudiantes -->
-        <section class="container mt-4">
+        <section class="container mt-4 col-9">
             <div class="row justify-content-center">
-                <div class="card col-md-3 align-items-center border-primary border-2 rounded-0 me-1">
+                <div class="card col-3 align-items-center border-primary border-2 rounded-0 me-1">
                     <div class="card-body text-center">
                         <h4 class="card-title mt-2 mb-4">Estudiante</h4>
                         <h6 class="card-subtitle mb-4">Tienen un descuento</h6>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 
-                <div class="card col-md-3 align-items-center border-info border-2 rounded-0 mx-1">
+                <div class="card col-3 align-items-center border-info border-2 rounded-0 mx-1">
                     <div class="card-body text-center">
                         <h4 class="card-title mt-2 mb-4">Trainee</h4>
                         <h6 class="card-subtitle mb-4">Tienen un descuento</h6>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 
-                <div class="card col-md-3 align-items-center border-warning border-2 rounded-0 ms-1">
+                <div class="card col-3 align-items-center border-warning border-2 rounded-0 ms-1">
                     <div class="card-body text-center">
                         <h4 class="card-title mt-2 mb-4">Junior</h4>
                         <h6 class="card-subtitle mb-4">Tienen un descuento</h6>
@@ -76,28 +76,38 @@
         </div>
 
         <!-- Sección para inscribirse como orador -->
-        <div class="container">
-            <div class="row d-flex justify-content-center mb-3">                
-                <article class="col-5">
-                    <input type="nombre" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Nombre">
-                </article>
-                <article class="col-5">
-                    <input type="apellido" class="form-control mb-3" id="exampleFormControlInput2" placeholder="Apellido">
-                </article>                    
-                <article class="col-10">
-                    <input type="correo" class="form-control mb-3" id="exampleFormControlInput3" placeholder="Correo">
+
+        <!-- Input Apellido y Nombre -->
+        <div class="container col-9">
+            <div class="row d-flex mb-2 justify-content-center">                
+                <article class="ps-0" style="width: 38.5%">
+                    <input type="nombre" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Nombre">                
                 </article>
 
-                <section class="col-6">
+                <article class="pe-0" style="width: 38.5%">
+                    <input type="apellido" class="form-control mb-3" id="exampleFormControlInput2" placeholder="Apellido">
+                </article>
+            </div>    
+            
+            <!-- Input Correo -->
+            <div class="row d-flex justify-content-center mb-2">
+                <article class="ps-0 pe-0" style="width: 77%;">
+                    <input type="correo" class="form-control mb-3" id="exampleFormControlInput3" placeholder="Correo">
+                </article>
+            </div>
+
+            <!-- Input Cantidad y Select Categoría -->
+            <div class="row d-flex justify-content-center mb-2">
+                <section class="ps-0" style="width: 38.5%">
                     <label for="cantidad" id="exampleFormControlInput4" class="form-label">Cantidad</label>
-                    <article class="col-md-6">
-                        <input type="number" class="form-control mb-3" id="exampleFormControlInput4" placeholder="Cantidad">
+                    <article>
+                        <input type="number" class="form-control mb-3" id="exampleFormControlInput4" placeholder="Cantidad" min="1">
                     </article>
                 </section>
 
-                <section class="col-6">
+                <section class="pe-0" style="width: 38.5%">
                 <label for="categoría" id="exampleFormControlInput5" class="form-label">Categoría</label>
-                    <article class="col-6">
+                    <article>
                         <select class="form-select" aria-label="">
                             <option selected></option>
                             <option value="1">Estudiante</option>
@@ -106,14 +116,22 @@
                         </select>
                     </article>
                 </section>
+            </div>
 
-                <p class="col-8">Total a Pagar: $</p>
-                
-                <article class="col-8">
+            <!-- Mensaje Total a Pagar -->
+            <div class="row d-flex justify-content-center mb-4">
+                <article class="ps-0 pe-0 rounded border" style="width: 77%; background-color: #CCE5FF; border-color: #9ADAFF;">
+                    <p style="color: #004085" class="pt-2 pb-2 ps-4 pe-4 m-0">Total a Pagar: $</p>
+                </article>
+            </div>
+
+            <!-- Botones Enviar y Borrar -->
+            <div class="row d-flex justify-content-center mb-3">
+                <article class="ps-0" style="width: 38.5%">
                     <button class="btn btn-success w-100 border-0" type="button" value="Enviar" style="background-color: #96C93E;">Borrar</button>
                 </article>
 
-                <article class="col-8">
+                <article class="pe-0" style="width: 38.5%">
                     <button class="btn btn-success w-100 border-0" type="button" value="Enviar" style="background-color: #96C93E;">Resumen</button>
                 </article>
             </div>
